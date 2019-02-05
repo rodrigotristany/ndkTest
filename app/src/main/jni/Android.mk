@@ -6,10 +6,15 @@ LOCAL_ARM_MODE := arm
 
 include $(CLEAR_VARS)
 LOCAL_MODULE    := imageconverter
-LOCAL_SRC_FILES := com.rodrigotristany.ndktest.ImageProcessorWrapper.cpp ImageProcessor.cpp
+LOCAL_SRC_FILES := ImageProcessorWrapper.cpp ImageProcessor.cpp
 LOCAL_LDLIBS := -lz -lm -llog -ljnigraphics -landroid
 include $(BUILD_SHARED_LIBRARY)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE    := imageprocessor
+LOCAL_SRC_FILES := ImageProcessor.cpp
+LOCAL_LDLIBS := -lz -lm -llog -ljnigraphics -landroid
+include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE    := surfacenativedraw
